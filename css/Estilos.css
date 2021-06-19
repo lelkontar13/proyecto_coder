@@ -1,0 +1,159 @@
+body{
+    background-image: url("../img/fondo1.jpg");
+    background-repeat: no-repeat; /*para que no se repita*/
+    background-position: center center;    
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 100px 650px 70px; /*definir las filas*/
+    grid-template-areas: "Menu Menu Menu"
+                         "Cuerpo Cuerpo Cuerpo"
+                         "Footer Footer Footer"; /*difinir el area para llamarlas y asignales elementos*/
+}
+
+/*HEADER*/
+
+header{
+    justify-self: start;
+    grid-area: Menu;
+}
+
+#logoBeirut{
+    width: 300px; 
+    height: 190px;
+}
+
+nav{
+    grid-area: Menu;
+    align-self: end;
+    justify-self: end;
+}
+
+#menu{
+    font-family: 'Parisienne', cursive;
+    margin:auto;
+    list-style-type: none;
+    
+}
+
+#menu li{
+    display: inline; /*LISTA HORIZONTAL*/
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#menu a{
+    font-size: 40px;
+    color: rgb(206, 224, 212);
+    text-decoration: none; /*SACA LA LINEA INFERIOR DEL TEXTO*/
+}
+
+/*INDEX*/
+
+.textoMain{
+    color: rgb(206, 224, 212);
+    font-size: 100px;
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+    justify-self: center;
+    align-self: center;
+    grid-area: Cuerpo;
+}
+
+/*MENU*/
+
+.tituloMain{
+    color: rgb(206, 224, 212);
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    grid-area: Cuerpo;
+}
+
+td{
+    font-family: 'Parisienne';
+    color: rgb(206, 224, 212);
+    border:rgb(44, 121, 70) 1px solid;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+table{
+    border:rgb(44, 121, 70) 3px solid;
+    margin-top: 50px;
+    margin: auto;
+}
+
+/*CONTACTO*/
+
+main{
+    grid-area: Cuerpo;
+    margin-top: 25px;
+}
+
+.tituloMain1{
+    color: rgb(206, 224, 212);
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 70px;
+}
+
+.tituloMain2{
+    color: rgb(206, 224, 212);
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.datosForm{
+    font-family: 'Parisienne', cursive;
+    color: rgb(206, 224, 212);
+}
+
+/*PIE DE PAGINA*/
+
+footer{
+    grid-area: Footer;
+    margin-bottom: 0px;
+}
+.container-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.textoPiePagina{
+    font-family: 'Parisienne', cursive;
+    color: rgb(206, 224, 212);
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: flex-start;
+    align-content: flex-end;
+}
+.logosPiePagina{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#logoRedes{
+    width: 30px; 
+    height: 30px;
+}
+
+#bandera{
+    width: 80px; 
+    height: 50px;
+}
+
+/*ENCONTRANOS*/
+
+#mapa{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+}

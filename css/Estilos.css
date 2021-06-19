@@ -19,11 +19,11 @@ header{
     grid-area: Menu;
 }
 
-#logoBeirut{
-    width: 300px; 
-    height: 190px;
+#logoBeirut {
+    width: 270px; 
+    height: 180px;
 }
-
+    
 nav{
     grid-area: Menu;
     align-self: end;
@@ -31,7 +31,7 @@ nav{
 }
 
 #menu{
-    font-family: 'Parisienne', cursive;
+    font-family: 'Merienda', cursive;
     margin:auto;
     list-style-type: none;
     
@@ -44,35 +44,57 @@ nav{
 }
 
 #menu a{
-    font-size: 40px;
+    font-size: 35px;
     color: rgb(206, 224, 212);
     text-decoration: none; /*SACA LA LINEA INFERIOR DEL TEXTO*/
 }
 
+#menu a:hover{
+    color: rgba(68, 158, 95, 0.89);
+}
+
 /*INDEX*/
+    
+.cuerpo{
+    grid-area: Cuerpo;
+}
 
 .textoMain{
     color: rgb(206, 224, 212);
-    font-size: 100px;
-    font-family: 'Parisienne', cursive;
-    font-weight: bold;
-    justify-self: center;
-    align-self: center;
-    grid-area: Cuerpo;
+    font-size: 70px;
+    font-family: 'Merienda', cursive;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.whatsapp{
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    padding-bottom: 10px ;
+}
+
+#logoWhatsapp{
+    height: 50px;
+    width: 50px;
+}
+
+#logoWhatsapp:hover{
+    transform: scale(1,1);
 }
 
 /*MENU*/
 
 .tituloMain{
     color: rgb(206, 224, 212);
-    font-family: 'Parisienne', cursive;
+    font-family: 'Merienda', cursive;
     font-weight: bold;
     font-size: 20px;
-    grid-area: Cuerpo;
 }
 
 td{
-    font-family: 'Parisienne';
+    font-family: 'Merienda', cursive;
     color: rgb(206, 224, 212);
     border:rgb(44, 121, 70) 1px solid;
     padding-right: 10px;
@@ -86,6 +108,7 @@ table{
     margin: auto;
 }
 
+
 /*CONTACTO*/
 
 main{
@@ -95,21 +118,21 @@ main{
 
 .tituloMain1{
     color: rgb(206, 224, 212);
-    font-family: 'Parisienne', cursive;
-    font-weight: bold;
-    font-size: 40px;
-    margin-top: 70px;
+    font-family: 'Merienda', cursive;
+    font-size: 45px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .tituloMain2{
     color: rgb(206, 224, 212);
-    font-family: 'Parisienne', cursive;
-    font-weight: bold;
+    font-family: 'Merienda', cursive;
     font-size: 30px;
 }
 
 .datosForm{
-    font-family: 'Parisienne', cursive;
+    font-family: 'Merienda', cursive;
     color: rgb(206, 224, 212);
 }
 
@@ -117,22 +140,24 @@ main{
 
 footer{
     grid-area: Footer;
-    margin-bottom: 0px;
+    background-image: linear-gradient(rgb(117, 5, 5), rgb(189, 87, 87), rgb(59, 2, 2));
 }
+
 .container-footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .textoPiePagina{
-    font-family: 'Parisienne', cursive;
+    font-family: 'Merienda', cursive;
     color: rgb(206, 224, 212);
     display: flex;
     font-size: 30px;
-    font-weight: bold;
     justify-content: flex-start;
     align-content: flex-end;
 }
+
 .logosPiePagina{
     display: flex;
     justify-content: flex-end;
@@ -149,11 +174,1100 @@ footer{
     height: 50px;
 }
 
+
 /*ENCONTRANOS*/
 
 #mapa{
     display: flex;
     justify-content: center;
     align-content: center;
+    
+}
+
+#medidasMapa{
+    height: 500px;
+    width: 1000px;
     margin-top: 50px;
 }
+
+/*BEIRUT*/
+
+.tituloHistoria{
+    color: rgb(206, 224, 212);
+    font-size: 15px;
+    font-family: 'Merienda', cursive;
+    margin-top: 80px;
+    margin-left: 40px;
+    text-decoration: underline;
+}
+
+.textoHistoria{
+    color: rgb(206, 224, 212);
+    font-size: 20px;
+    font-family: 'Merienda', cursive;
+    display: flex;
+    align-content: center;
+    margin-left: 40px;
+}
+
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 600px){
+    /*TELEFONOS - DISPOSITIVOS XS*/
+    body{
+        background-image: url("../img/fondo1.jpg");
+        background-repeat: no-repeat; /*para que no se repita*/
+        background-position: center center;    
+        background-attachment: fixed;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 170px 380px 70px; /*definir las filas*/
+        grid-template-areas: "Menu Menu Menu"
+                             "Cuerpo Cuerpo Cuerpo"
+                             "Footer Footer Footer"; /*difinir el area para llamarlas y asignales elementos*/
+    }
+    
+    /*HEADER*/
+    
+    header{
+        justify-self: center;
+        align-self: start;
+        grid-area: Menu;
+    }
+    
+    #logoBeirut{
+        width: 220px; 
+        height: 130px;
+    }
+    
+    nav{
+        grid-area: Menu;
+        align-self: end;
+        justify-self: center;
+    }
+    
+    #menu{
+        font-family: 'Merienda', cursive;
+        margin:auto;
+        list-style-type: none;
+        
+    }
+    
+    #menu li{
+        display: inline; /*LISTA HORIZONTAL*/
+
+    }
+    
+    #menu a{
+        font-size: 15px;
+        color: rgb(206, 224, 212);
+        text-decoration: none; /*SACA LA LINEA INFERIOR DEL TEXTO*/
+    }
+
+    #menu a:hover{
+        color: rgba(68, 158, 95, 0.89);
+    }
+    
+    /*INDEX*/
+    
+    .cuerpo{
+        grid-area: Cuerpo;
+    }
+
+    .textoMain{
+        color: rgb(206, 224, 212);
+        font-size: 20px;
+        font-family: 'Merienda', cursive;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 50px;
+    }
+
+    .whatsapp{
+        display: flex;
+        justify-content: flex-end;
+        align-content: flex-end;
+        margin-top: 70px;
+    }
+
+    #logoWhatsapp{
+        height: 30px;
+        width: 30px;
+    }
+    
+    /*MENU*/
+    
+    .tituloMain{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    td{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+        border:rgb(44, 121, 70) 1px solid;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    
+    table{
+        border:rgb(44, 121, 70) 3px solid;
+        margin-top: 10px;
+    }
+    
+    
+    /*CONTACTO*/
+    
+    main{
+        grid-area: Cuerpo;
+        margin-top: 10px;
+    }
+    
+    .tituloMain1{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-size: 15px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .tituloMain2{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-size: 13px;
+    }
+    
+    .datosForm{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+    }
+    
+    /*PIE DE PAGINA*/
+    
+    footer{
+        grid-area: Footer;
+        background-image: linear-gradient(rgb(117, 5, 5), rgb(189, 87, 87), rgb(59, 2, 2));
+    }
+    .container-footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .textoPiePagina{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+        display: flex;
+        font-size: 11px;
+        justify-content: flex-start;
+        align-content: flex-end;
+    }
+    .logosPiePagina{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    #logoRedes{
+        width: 25px; 
+        height: 25px;
+    }
+    
+    #bandera{
+        width: 60px; 
+        height: 35px;
+    }
+
+    
+    /*ENCONTRANOS*/
+    
+    #mapa{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 10px;
+    }
+
+    #medidasMapa{
+        height: 250px;
+        width: 350px;
+        margin-top: 30px;
+    }
+
+    /*BEIRUT*/
+
+    .tituloHistoria{
+        color: rgb(206, 224, 212);
+        font-size: 12px;
+        font-family: 'Merienda', cursive;
+        margin-top: 20px;
+        margin-left: 40px;
+        text-decoration: underline;
+    }
+
+    .textoHistoria{
+        color: rgb(206, 224, 212);
+        font-size: 15px;
+        font-family: 'Merienda', cursive;
+        display: flex;
+        align-content: center;
+        margin-left: 40px;
+    }
+
+}
+    
+@media only screen and (min-width: 600px){
+    /*TELEFONOS + LANDSCAPE + TABLET VERTICAL - DISPOSITIVOS SMALL*/
+    body{
+        background-image: url("../img/fondo1.jpg");
+        background-repeat: no-repeat; /*para que no se repita*/
+        background-position: center center;    
+        background-attachment: fixed;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 150px 400px 70px; /*definir las filas*/
+        grid-template-areas: "Menu Menu Menu"
+                             "Cuerpo Cuerpo Cuerpo"
+                             "Footer Footer Footer"; /*difinir el area para llamarlas y asignales elementos*/
+    }
+    
+    /*HEADER*/
+    
+    header{
+        justify-self: center;
+        align-self: start;
+        grid-area: Menu;
+    }
+    
+    #logoBeirut{
+        width: 220px; 
+        height: 150px;
+    }
+    
+    nav{
+        grid-area: Menu;
+        align-self: end;
+        justify-self: center;
+    }
+    
+    #menu{
+        font-family: 'Merienda', cursive;
+        margin:auto;
+        list-style-type: none;
+        
+    }
+    
+    #menu li{
+        display: inline; /*LISTA HORIZONTAL*/
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    #menu a{
+        font-size: 16px;
+        color: rgb(206, 224, 212);
+        text-decoration: none; /*SACA LA LINEA INFERIOR DEL TEXTO*/
+    }
+
+    #menu a:hover{
+        color: rgba(68, 158, 95, 0.89);
+    }
+
+    /*INDEX*/
+    
+    .cuerpo{
+        grid-area: Cuerpo;
+    }
+
+    .textoMain{
+        color: rgb(206, 224, 212);
+        font-size: 35px;
+        font-family: 'Merienda', cursive;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 50px;
+    }
+
+    .whatsapp{
+        display: flex;
+        justify-content: flex-end;
+        align-content: flex-end;
+        margin-top: 70px;
+    }
+
+    #logoWhatsapp{
+        height: 50px;
+        width: 50px;
+    }
+    
+    /*MENU*/
+    
+    .tituloMain{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    
+    td{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+        border:rgb(44, 121, 70) 1px solid;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 17px;
+    }
+    
+    table{
+        border:rgb(44, 121, 70) 3px solid;
+        margin-top: 10px;
+    }
+    
+    
+    /*CONTACTO*/
+    
+    main{
+        grid-area: Cuerpo;
+        margin-top: 15px;
+    }
+    
+    .tituloMain1{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-size: 25px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .tituloMain2{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-size:23px;
+    }
+    
+    .datosForm{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+    }
+    
+    /*PIE DE PAGINA*/
+    
+    footer{
+        grid-area: Footer;
+        background-image: linear-gradient(rgb(117, 5, 5), rgb(189, 87, 87), rgb(59, 2, 2));
+    }
+    .container-footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .textoPiePagina{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+        display: flex;
+        font-size: 15px;
+        font-weight: bold;
+        justify-content: flex-start;
+        align-content: flex-end;
+    }
+    .logosPiePagina{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    #logoRedes{
+        width: 30px; 
+        height: 30px;
+    }
+    
+    #bandera{
+        width: 80px; 
+        height: 50px;
+    }
+    
+    /*ENCONTRANOS*/
+    
+    #mapa{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 20px;
+    }
+    
+    #medidasMapa{
+        height: 350px;
+        width: 570px;
+        margin-top: 10px;
+    }
+
+    /*BEIRUT*/
+
+    .tituloHistoria{
+        color: rgb(206, 224, 212);
+        font-size: 14px;
+        font-family: 'Merienda', cursive;
+        margin-top: 50px;
+        margin-left: 30px;
+        text-decoration: underline;
+    }
+
+    .textoHistoria{
+        color: rgb(206, 224, 212);
+        font-size: 16px;
+        font-family: 'Merienda', cursive;
+        display: flex;
+        align-content: center;
+        margin-left: 40px;
+    }
+    
+}
+
+@media only screen and (min-width: 768px){
+    /*TABLET LAND + UP - DISPOSITIVOS MEDIOS*/
+    body{
+        background-image: url("../img/fondo1.jpg");
+        background-repeat: no-repeat; /*para que no se repita*/
+        background-position: center center;    
+        background-attachment: fixed;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 90px 450px 70px; /*definir las filas*/
+        grid-template-areas: "Menu Menu Menu"
+                             "Cuerpo Cuerpo Cuerpo"
+                             "Footer Footer Footer"; /*difinir el area para llamarlas y asignales elementos*/
+    }
+    
+    /*HEADER*/
+    
+    header{
+        justify-self: start;
+        grid-area: Menu;
+    }
+    
+    #logoBeirut {
+        width: 230px; 
+        height: 150px;
+    }
+        
+    nav{
+        grid-area: Menu;
+        align-self: end;
+        justify-self: end;
+    }
+    
+    #menu{
+        font-family: 'Merienda', cursive;
+        margin:auto;
+        list-style-type: none;
+        
+    }
+    
+    #menu li{
+        display: inline; /*LISTA HORIZONTAL*/
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    #menu a{
+        font-size: 18px;
+        color: rgb(206, 224, 212);
+        text-decoration: none; /*SACA LA LINEA INFERIOR DEL TEXTO*/
+    }
+
+    #menu a:hover{
+        color: rgba(68, 158, 95, 0.89);
+    }
+
+    /*INDEX*/
+    
+    .cuerpo{
+        grid-area: Cuerpo;
+    }
+
+    .textoMain{
+        color: rgb(206, 224, 212);
+        font-size: 50px;
+        font-family: 'Merienda', cursive;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 50px;
+    }
+
+    .whatsapp{
+        display: flex;
+        justify-content: flex-end;
+        align-content: flex-end;
+        margin-top: 70px;
+    }
+
+    #logoWhatsapp{
+        height: 50px;
+        width: 50px;
+    }
+    
+    /*MENU*/
+    
+    .tituloMain{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    
+    td{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+        border:rgb(44, 121, 70) 1px solid;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 17px;
+    }
+    
+    table{
+        border:rgb(44, 121, 70) 3px solid;
+        margin-top: 20px;
+    }
+    
+    
+    /*CONTACTO*/
+    
+    main{
+        grid-area: Cuerpo;
+        margin-top: 25px;
+    }
+    
+    .tituloMain1{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-size: 33px;
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .tituloMain2{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-size: 28px;
+    }
+    
+    .datosForm{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+    }
+    
+    /*PIE DE PAGINA*/
+    
+    footer{
+        grid-area: Footer;
+        background-image: linear-gradient(rgb(117, 5, 5), rgb(189, 87, 87), rgb(59, 2, 2));
+    }
+    
+    .container-footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .textoPiePagina{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+        display: flex;
+        font-size: 18px;
+        justify-content: flex-start;
+        align-content: flex-end;
+    }
+    
+    .logosPiePagina{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    #logoRedes{
+        width: 30px; 
+        height: 30px;
+    }
+    
+    #bandera{
+        width: 70px; 
+        height: 40px;
+    }
+    
+    /*ENCONTRANOS*/
+    
+    #mapa{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        
+    }
+    
+    #medidasMapa{
+        height: 330px;
+        width: 700px;
+        margin-top: 30px;
+    }
+
+    /*BEIRUT*/
+
+    .tituloHistoria{
+        color: rgb(206, 224, 212);
+        font-size: 15px;
+        font-family: 'Merienda', cursive;
+        margin-top: 60px;
+        margin-left: 40px;
+        text-decoration: underline;
+    }
+
+    .textoHistoria{
+        color: rgb(206, 224, 212);
+        font-size: 19px;
+        font-family: 'Merienda', cursive;
+        display: flex;
+        align-content: center;
+        margin-left: 40px;
+    }
+
+}
+
+@media only screen and (min-width: 992px){
+    body{
+        background-image: url("../img/fondo1.jpg");
+        background-repeat: no-repeat; /*para que no se repita*/
+        background-position: center center;    
+        background-attachment: fixed;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 100px 450px 70px; /*definir las filas*/
+        grid-template-areas: "Menu Menu Menu"
+                             "Cuerpo Cuerpo Cuerpo"
+                             "Footer Footer Footer"; /*difinir el area para llamarlas y asignales elementos*/
+    }
+    
+    /*HEADER*/
+    
+    header{
+        justify-self: start;
+        grid-area: Menu;
+    }
+    
+    #logoBeirut {
+        width: 250px; 
+        height: 160px;
+    }
+        
+    nav{
+        grid-area: Menu;
+        align-self: end;
+        justify-self: end;
+    }
+    
+    #menu{
+        font-family: 'Merienda', cursive;
+        margin:auto;
+        list-style-type: none;
+        
+    }
+    
+    #menu li{
+        display: inline; /*LISTA HORIZONTAL*/
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    #menu a{
+        font-size: 25px;
+        color: rgb(206, 224, 212);
+        text-decoration: none; /*SACA LA LINEA INFERIOR DEL TEXTO*/
+    }
+
+    #menu a:hover{
+        color: rgba(68, 158, 95, 0.89);
+    }
+    
+
+    /*INDEX*/
+    
+    .cuerpo{
+        grid-area: Cuerpo;
+    }
+    
+    .textoMain{
+        color: rgb(206, 224, 212);
+        font-size: 60px;
+        font-family: 'Merienda', cursive;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .whatsapp{
+        display: flex;
+        justify-content: flex-end;
+        align-content: flex-end;
+        padding-bottom: 10px ;
+    }
+    
+    #logoWhatsapp{
+        height: 50px;
+        width: 50px;
+    }
+
+    #logoWhatsapp:hover{
+        height: 60px;
+        width: 60px;
+    }
+    
+    /*MENU*/
+    
+    .tituloMain{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    td{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+        border:rgb(44, 121, 70) 1px solid;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 18px;
+    }
+    
+    table{
+        border:rgb(44, 121, 70) 3px solid;
+        margin-top: 20px;
+    }
+
+    
+    /*CONTACTO*/
+    
+    main{
+        grid-area: Cuerpo;
+        margin-top: 25px;
+    }
+    
+    .tituloMain1{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-size: 40px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .tituloMain2{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-size: 25px;
+    }
+    
+    .datosForm{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+    }
+    
+    /*PIE DE PAGINA*/
+    
+    footer{
+        grid-area: Footer;
+        background-image: linear-gradient(rgb(117, 5, 5), rgb(189, 87, 87), rgb(59, 2, 2));
+    }
+    
+    .container-footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .textoPiePagina{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+        display: flex;
+        font-size: 18px;
+        justify-content: flex-start;
+        align-content: flex-end;
+    }
+    
+    .logosPiePagina{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    #logoRedes{
+        width: 30px; 
+        height: 30px;
+    }
+    
+    #bandera{
+        width: 80px; 
+        height: 50px;
+    }
+    
+    /*ENCONTRANOS*/
+    
+    #mapa{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        
+    }
+    
+    #medidasMapa{
+        height: 350px;
+        width: 800px;
+        margin-top: 20px;
+    }
+
+    /*BEIRUT*/
+
+    .tituloHistoria{
+        color: rgb(206, 224, 212);
+        font-size: 15px;
+        font-family: 'Merienda', cursive;
+        margin-top: 80px;
+        margin-left: 40px;
+        text-decoration: underline;
+    }
+
+    .textoHistoria{
+        color: rgb(206, 224, 212);
+        font-size: 20px;
+        font-family: 'Merienda', cursive;
+        display: flex;
+        align-content: center;
+        margin-left: 40px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+    body{
+        background-image: url("../img/fondo1.jpg");
+        background-repeat: no-repeat; /*para que no se repita*/
+        background-position: center center;    
+        background-attachment: fixed;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 100px 530px 70px; /*definir las filas*/
+        grid-template-areas: "Menu Menu Menu"
+                             "Cuerpo Cuerpo Cuerpo"
+                             "Footer Footer Footer"; /*difinir el area para llamarlas y asignales elementos*/
+    }
+    
+    /*HEADER*/
+    
+    header{
+        justify-self: start;
+        grid-area: Menu;
+    }
+    
+    #logoBeirut {
+        width: 270px; 
+        height: 180px;
+    }
+        
+    nav{
+        grid-area: Menu;
+        align-self: end;
+        justify-self: end;
+    }
+    
+    #menu{
+        font-family: 'Merienda', cursive;
+        margin:auto;
+        list-style-type: none;
+        
+    }
+    
+    #menu li{
+        display: inline; /*LISTA HORIZONTAL*/
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    #menu a{
+        font-size: 32px;
+        color: rgb(206, 224, 212);
+        text-decoration: none; /*SACA LA LINEA INFERIOR DEL TEXTO*/
+    }
+    
+    #menu a:hover{
+        color: rgba(68, 158, 95, 0.89);
+    }
+
+    /*INDEX*/
+    
+    .cuerpo{
+        grid-area: Cuerpo;
+    }
+
+    .textoMain{
+        color: rgb(206, 224, 212);
+        font-size: 70px;
+        font-family: 'Merienda', cursive;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .whatsapp{
+        display: flex;
+        justify-content: flex-end;
+        align-content: flex-end;
+        padding-bottom: 10px ;
+    }
+
+    #logoWhatsapp{
+        height: 50px;
+        width: 50px;
+    }
+
+    #logoWhatsapp:hover{
+        transform: scale(1,1);
+    }
+
+    /*MENU*/
+    
+    .tituloMain{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    td{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+        border:rgb(44, 121, 70) 1px solid;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 20px;
+    }
+    
+    table{
+        border:rgb(44, 121, 70) 3px solid;
+        margin-top: 50px;
+    }
+    
+    
+    /*CONTACTO*/
+    
+    main{
+        grid-area: Cuerpo;
+        margin-top: 25px;
+    }
+    
+    .tituloMain1{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-size: 45px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .tituloMain2{
+        color: rgb(206, 224, 212);
+        font-family: 'Merienda', cursive;
+        font-size: 30px;
+    }
+    
+    .datosForm{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+    }
+    
+    /*PIE DE PAGINA*/
+    
+    footer{
+        grid-area: Footer;
+        background-image: linear-gradient(rgb(117, 5, 5), rgb(189, 87, 87), rgb(59, 2, 2));
+    }
+    
+    .container-footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .textoPiePagina{
+        font-family: 'Merienda', cursive;
+        color: rgb(206, 224, 212);
+        font-size: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-end;
+    }
+    
+    .logosPiePagina{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    #logoRedes{
+        width: 30px; 
+        height: 30px;
+    }
+    
+    #bandera{
+        width: 80px; 
+        height: 50px;
+    }
+
+    /*ENCONTRANOS*/
+    
+    #mapa{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        
+    }
+    
+    #medidasMapa{
+        height: 450px;
+        width: 1000px;
+        margin-top: 30px;
+    }
+
+    /*BEIRUT*/
+
+    .tituloHistoria{
+        color: rgb(206, 224, 212);
+        font-size: 15px;
+        font-family: 'Merienda', cursive;
+        margin-top: 80px;
+        margin-left: 40px;
+        text-decoration: underline;
+    }
+
+    .textoHistoria{
+        color: rgb(206, 224, 212);
+        font-size: 20px;
+        font-family: 'Merienda', cursive;
+        display: flex;
+        align-content: center;
+        margin-left: 40px;
+    }
+
+}
+
